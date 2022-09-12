@@ -1,0 +1,66 @@
+The below mentioned requests are made with respect to this website : https://flask-rest-api-12.herokuapp.com/
+GET REQUESTS:
+API to get details of a user or doctor or hospital or lab.
+
+To get data of single entity:
+format : urlname.com/api/(name_of_object)/(id)
+where, name_of_object is "user","doctor","hospital" or "lab"
+Example : https://flask-rest-api-12.herokuapp.com/api/user/1(This is get request to get a single user with the id 1)
+Sample output of the get request made using the above api :
+{
+    "user_city": "Mumbai",
+    "user_email": "rupeshr.18.becs@acharya.ac.in",
+    "user_id": 1,
+    "user_mobile": "8960852282",
+    "user_name": "rrkk",
+    "user_state": "Himachal Pradesh"
+}
+
+
+To get data of all the elements in a entity:
+format : urlname.com/api/(name_of_object)
+where, name_of_object is "users","doctors","hospitals" or "labs"
+Example : https://flask-rest-api-12.herokuapp.com/api/users
+Sample output of the get request made using the above api :
+{
+    "users": [
+        {
+            "city": "Mumbai",
+            "email": "rupeshr.18.becs@acharya.ac.in",
+            "id": 1,
+            "mob": "8960852282",
+            "name": "rr kk",
+            "state": "Himachal Pradesh"
+        },
+        {
+            "city": "Lucknow",
+            "email": "some@ex.com",
+            "id": 2,
+            "mob": "865566",
+            "name": "hello rupesh",
+            "state": "Uttar Pradesh"
+        }
+    ]
+}
+
+POST REQUESTS:
+API to add a user or doctor or hospital or lab:
+format: urlname.com/api/add/(name_of_object) where, name_of_object is "user","doctor","hospital" or "lab"
+Example : https://flask-rest-api-12.herokuapp.com/api/add/user
+body of the post request : 
+{"fname" : "Vipin", "lname" : "Kumar", "email" : "vipin@some.com", "mob" : "12312365", "city" : "Lucknow", "state" : "Uttar Pradesh", 
+"password" : "wk123"}
+Sample output of the get request made using the above api : 
+{
+    "message": "new user created"
+}
+
+DELETE REQUESTS:
+API to delete a user or doctor or hospital or lab.
+format: urlname.com/api/delete/(name_of_object)
+where name_of_object is "user","doctor","hospital" or "lab"
+Example : https://flask-rest-api-12.herokuapp.com/api/delete/user/3
+Sample output of the get request made using the above api : 
+{
+    "message": "user deleted"
+}
