@@ -1,0 +1,18 @@
+git init
+Initialize repository
+
+git remote add <or­igi­n/a­lte­rnate name> <repo url>
+Link local repo with <repo URL>
+
+git remote -v
+List remote inform­ation
+
+git add .
+Adds all modified and new (untra­cked) files in the current directory and all subdir­ect­ories to the staging area
+
+
+git commit -m <commit messag­e>
+
+
+git push -u origin master
+Push committed changes (-u and track branch with remote)
